@@ -2,6 +2,12 @@ pipeline {
     agent any
 
     stages {
+    stage('clone')
+    {
+    steps{
+    git 'https://github.com/serpantdi/cal.git'
+    }
+    }
 
         stage('build')
         {
