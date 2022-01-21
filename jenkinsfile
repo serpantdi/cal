@@ -2,11 +2,7 @@ pipeline {
     agent any
 
     stages {
-         stage('clone') {
-            steps {
-                git 'https://github.com/ltenconi/calculator-api.git'
-            }
-        }
+
         stage('build')
         {
             steps{
