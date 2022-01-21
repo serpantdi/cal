@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+
+    stages {
+         stage('clone') {
+            steps {
+                git 'https://github.com/ltenconi/calculator-api.git'
+            }
+        }
+        stage('build')
+        {
+            steps{
+                bat 'mvn clean compile'
+                bat 'mvn clean install'
+            }
+        }
+    }
+}
